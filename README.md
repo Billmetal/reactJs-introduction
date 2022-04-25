@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Curso Introdução ao ReactJs
+
+Curso de introdução ao ReactJs pela Digital Innovation One.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
