@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './styles.css';
+// import './styles.css';
 import Button from "./Button";
 import ComponentA from "./ComponentA";
 import ComponentB from "./ComponentB";
@@ -20,6 +20,31 @@ function primeiroJSX() {
     </div>);
 }
 
+const buttonA = <button>Primeiro Botão</button>
+const buttonB = <button>Segundo Botão</button>
+
+const itemBooleano = true;
+
+const showInTrue = () => (
+  <div>
+    Botão a ser mostrado quando true
+    <br/>
+    {buttonA}
+  </div> 
+);
+
+const showInFalse = () => (
+  <div>
+    Botão a ser mostrado quando false
+    <br/>
+    {buttonB}
+  </div>
+); 
+
+const showOrNot = () => {
+  return itemBooleano ? (<div><h1>Informação ou Componente a ser Mostrado !</h1></div>) : null; 
+};
+
 const App = () => {
   return (<div className='App'>
     Hello World
@@ -32,7 +57,13 @@ const App = () => {
       </ComponentB>
     </ComponentA>
     <Lifecycle></Lifecycle>
-    </div>);
+    <br/>
+    <h2>===========  Continua com Conditional-Renderization ===============</h2>
+    {itemBooleano ? showInTrue() : showInFalse()} 
+    <br/>
+    {showOrNot()}  
+    </div>
+  );  
 };
 
 class Lifecycle extends Component {
