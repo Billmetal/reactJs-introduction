@@ -76,7 +76,7 @@ const listCustomer = [
 const renderCustomer = (customer,index) => {
   return (
     <div key={`customer-${customer.id}`}>
-      <li>{customer.name}</li>
+      <li>{customer.name} <button onClick={(e) => deleteClick(e ,customer.id)}>Deletar Customer X</button></li>
       {customer.skills.map(renderSkills)}
     </div>
   );
@@ -88,6 +88,28 @@ const renderSkills = (skill,index) => {
       <li>{skill}</li>
     </div>
   );
+};
+
+/****** Manipulando Eventos  *******/
+
+const name = "Digital Innovation One";
+
+const showEvent = (e) => {
+  console.log("Evento Clicado")
+  console.log(e);
+  alert(name);
+};
+
+const Btn = <button onClick={showEvent}>Mostrar Evento</button>;
+
+const handleChange = (e) => {
+  const { value } = e.target;
+  console.log(value);
+};
+
+const deleteClick = (e,id) => {
+  console.log("Deletar Customer");
+  alert(`ID do Customer para deletar = ${id}`);
 };
 
 /****** Função Principal  *******/
@@ -105,20 +127,24 @@ const App = () => {
         </ComponentB>
       </ComponentA>
       <br/>
-      <h2>===========  Ecossistemas e Lifecycle ===============</h2>
+      <h2>==============  Ecossistemas e Lifecycle ===============</h2>
       <Lifecycle></Lifecycle>
       <br/>
-      <h2>===========  Continua com Conditional-Renderization ===============</h2>
+      <h2>==============  Continua com Conditional-Renderization ===============</h2>
       {itemBooleano ? showInTrue : showInFalse} 
       <br/>
       {showOrNot()} 
       <br/>
-      <h2>===========  Chaves e Listas ===============</h2> 
+      <h2>===============  Chaves e Listas ===============</h2> 
       <div>
         <ul>
           {listCustomer.map(renderCustomer)}
         </ul>
       </div>
+      <br/>
+      <h2>===============  Manipulando Eventos ===============</h2>
+      <input onChange={handleChange}></input>
+      {Btn}
     </div>
   );  
 };
