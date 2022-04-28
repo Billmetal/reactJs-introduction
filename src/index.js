@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Aplication from './aplicacoes-internet/Aplication';
 // import './styles.css';
 import { Button, ButtonDel } from "./Button";
 import ComponentA from "./ComponentA";
@@ -18,7 +19,7 @@ function alerta(a,b){
 
 function primeiroJSX() {
     return (<div>
-      Willian K. - Introdução ao ReactJs
+      Willian K. - <h1>Introdução ao ReactJs</h1>
       <h1 className='teste'>Soma: {sum(10,30)}</h1>
     </div>);
 }
@@ -124,6 +125,9 @@ const App = () => {
       <h2>===============  Manipulando Eventos ===============</h2>
       <input onChange={handleChange}></input>
       {Btn}
+      <div style={{marginLeft: "50%",position: "absolute", top: "0"}}>
+        <Aplication></Aplication>
+      </div>
     </div>
   );  
 };

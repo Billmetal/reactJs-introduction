@@ -2,6 +2,11 @@
 
 Curso de introdução ao ReactJs pela Digital Innovation One.
 
+# Desenvolvimento de aplicações para internet com ReactJS
+
+Neste repositório também será incorporado o módulo de desenvolvimento de aplicações para internet com ReactJS ,
+curso pela DIgital Innovation One.
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
