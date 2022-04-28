@@ -5,4 +5,8 @@ function Button(props){
     return (<button onClick={onClick}>{name}</button>);
 }
 
-export default Button;
+const ButtonDel = ({ children, onClick }) => (
+    <button onClick={onClick}>{children}</button>
+);
+
+export {Button,ButtonDel};

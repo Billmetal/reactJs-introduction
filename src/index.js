@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 // import './styles.css';
-import Button from "./Button";
+import { Button, ButtonDel } from "./Button";
 import ComponentA from "./ComponentA";
 import ComponentB from "./ComponentB";
+import mock from "./mock";
 
 function sum(a,b){
   return a + b;
@@ -51,32 +52,10 @@ const showOrNot = () => {
 
 /****** Chaves e Listas  *******/
 
-const listCustomer = [
-  {
-    id: 1,
-    name: "Bruno Carneiro",
-    skills: ["React","Node","CSS","WebPack"]
-  },
-  {
-    id: 2,
-    name: "Aline Vasconcelos",
-    skills: ["HTML","Javascript","CSS","VueJs"]
-  },
-  {
-    id: 3,
-    name: "Fulano de Tal",
-    skills: ["Java","Spring Boot","Android","Angular"]
-  },{
-    id: 4,
-    name: "José Ciclano",
-    skills: ["C#","Java","Javascript","Python"]
-  }
-];
-
 const renderCustomer = (customer,index) => {
   return (
     <div key={`customer-${customer.id}`}>
-      <li>{customer.name} <button onClick={(e) => deleteClick(e ,customer.id)}>Deletar Customer X</button></li>
+      <li>{customer.name} <ButtonDel onClick={(e) => deleteClick(e ,customer.id)}>Deletar Customer X</ButtonDel></li>
       {customer.skills.map(renderSkills)}
     </div>
   );
@@ -138,7 +117,7 @@ const App = () => {
       <h2>===============  Chaves e Listas ===============</h2> 
       <div>
         <ul>
-          {listCustomer.map(renderCustomer)}
+          {mock.map(renderCustomer)}
         </ul>
       </div>
       <br/>
