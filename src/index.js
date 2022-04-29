@@ -110,7 +110,7 @@ const App = () => {
       <h2>==============  Ecossistemas e Lifecycle ===============</h2>
       <Lifecycle></Lifecycle>
       <br/>
-      <h2>==============  Continua com Conditional-Renderization ===============</h2>
+      <h2>==========  Continua com Conditional-Renderization ===========</h2>
       {itemBooleano ? showInTrue : showInFalse} 
       <br/>
       {showOrNot()} 

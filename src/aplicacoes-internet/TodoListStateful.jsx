@@ -32,7 +32,7 @@ class TodoListStateful extends Component {
             <div className='bloco-lista'>
                 <p>Minha Lista Statefull</p>
                 <ul className='lista-estilizada'>
-                    {items.map(item => <li>{item}</li>)}
+                    {items.map((item,index) => <li key={index}>{item}</li>)}
                 </ul>
                 <button onClick={() => this.addItem("Cerveja")}>Adicionar Item</button>
                 <button onClick={() => this.removeItem()}>Remover Item</button>

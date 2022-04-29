@@ -16,7 +16,7 @@ const TodoListFuncional = () => {
         <div className='bloco-lista'>
             <p>Minha Lista Funcional</p>
             <ul className='lista-estilizada'>
-                {items.map(item => <li>{item}</li>)}
+                {items.map((item,index) => <li key={index}>{item}</li>)}
             </ul>
             <button onClick={() => addItem("Cerveja")}>Adicionar Item</button>
             <button onClick={() => removeItem()}>Remover Item</button>
