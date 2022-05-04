@@ -5,18 +5,20 @@ import TodoListFuncional from "./TodoListFuncional";
 import NameForm from "./NameForm";
 import SorveteForm from './SorveteForm';
 import FileInput from "./FileInput";
+import Counter from './Counter';
+import { Provider } from "react-redux";
+import { createStore} from 'redux';
+import { reducer } from "./redux/reducers";
 
 const spaces = {
     margin: "0px 30px"
 }
 
-const ButtonsForm = () => {
-    return (
-        <div style={{display: "flex", justifyContent: "center"}}>
-            <button style={spaces} onClick={() => null}>Form 1</button><button style={spaces} onClick={() => null}>Form 2</button><button style={spaces} onClick={() => null}>Form 3</button>
-        </div>
-    );
-};
+/****** REDUX  *******/
+
+const store = createStore (
+    reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 
 const Aplication = () => {
@@ -32,6 +34,10 @@ const Aplication = () => {
             <SorveteForm/>
             <br/>
             <FileInput/>
+            <h2>===============  Redux ===============</h2>
+            <Provider store={store}>
+                <Counter/>
+            </Provider>
         </div>
     );
 };
