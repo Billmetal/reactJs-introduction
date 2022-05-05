@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { createStore} from 'redux';
 import { reducer } from "./redux/reducers";
 import { Topico1 } from './http/Topico1';
+import Rest from './redux-rest/Rest';
 
 const spaces = {
     margin: "0px 30px"
@@ -41,6 +42,8 @@ const Aplication = () => {
             </Provider>
             <h2>===============  HTTP ===============</h2>
             {Topico1}
+            <h2>===============  Redux + Rest ===============</h2>
+            <Rest/>
         </div>
     );
 };
