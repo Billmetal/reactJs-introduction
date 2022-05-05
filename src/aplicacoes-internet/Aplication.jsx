@@ -11,6 +11,7 @@ import { createStore} from 'redux';
 import { reducer } from "./redux/reducers";
 import { Topico1 } from './http/Topico1';
 import Rest from './redux-rest/Rest';
+import { Topico2 } from './Testes-TDD-BDD/debugging/Topico2';
 
 const spaces = {
     margin: "0px 30px"
@@ -44,6 +45,8 @@ const Aplication = () => {
             {Topico1}
             <h2>===============  Redux + Rest ===============</h2>
             <Rest/>
+            <h2>===============  Debuggind ===============</h2>
+            <Topico2/>
         </div>
     );
 };
